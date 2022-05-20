@@ -1,0 +1,16 @@
+.card-news {
+  background-image: url(../images/istockphoto-1248542684-170667a.jpeg);
+  width: 260px;
+  height: 200px;
+  border-radius: 10px;
+  margin-top: 180px;
+  box-shadow: 2px 5px 3px rgba(000, 000, 000, 0.2);
+  display: flex;
+  align-items: flex-end;
+}
+
+p{
+  color: #fff;
+  margin: 10px 0;
+  text-shadow: 2px 5px 3px rgba(000, 000, 000, 0.4);
+}

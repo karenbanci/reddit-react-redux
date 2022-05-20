@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { NavBar } from './components/navbar/navbar';
+import { NewsContent } from "./pages/home/newscontent.js";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <header className="App-header">
         <NavBar />
 
+        <NewsContent />
       </header>
     </div>
   );
