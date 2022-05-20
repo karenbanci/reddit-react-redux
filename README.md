@@ -1,3 +1,7 @@
+# Project under construction ⚠️ 
+
+The project's goal is to create a prototype of Reddit, using ReactJs and Redux technologies.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
