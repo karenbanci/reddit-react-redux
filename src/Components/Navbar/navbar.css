@@ -5,11 +5,30 @@
   height: 60px;
   left: 0px;
   top: 0px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .nav-logo {
   width: 117px;
   height: 40px;
-  left: 30px;
-  top: 10px;
+  margin: 10px 0 0 20px;
+}
+
+  .nav-toggle {
+    display: none;
+  }
+
+@media only screen and (max-width: 768px) {
+  .nav-toggle{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px;
+    width: 100%;
+    padding: 0;
+    align-items: center;
+    list-style: none;
+    color: #635F5F;
+  }
+
 }
