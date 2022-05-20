@@ -15,9 +15,18 @@
   margin: 10px 0 0 20px;
 }
 
-  .nav-toggle {
-    display: none;
-  }
+.nav-toggle {
+  display: none;
+}
+
+.nav-login {
+  color: #635F5F;
+  font-size: 35px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 
 @media only screen and (max-width: 768px) {
   .nav-toggle{
@@ -29,6 +38,11 @@
     align-items: center;
     list-style: none;
     color: #635F5F;
+    font-size: 40px;
+  }
+
+  .nav-login{
+    display: none;
   }
 
 }

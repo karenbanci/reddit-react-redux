@@ -1,13 +1,16 @@
 import React from "react";
 import "./search.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+
 
 
 export const Search = () => {
   return (
-    <form className="search">
-      <input type="text" placeholder="Search" />
+    <form className="search-navegation">
+      <input type="text" className="search" placeholder="Search" />
       <button type="submit" className="search-button">
-        🔎
+        <FontAwesomeIcon icon={faMagnifyingGlass} />
       </button>
     </form>
   );
