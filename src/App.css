@@ -20,3 +20,32 @@
   flex-direction: column;
   align-items: center;
 }
+
+.App-body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #635F5F;
+  font-family: 'Open Sans';
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+h2{
+  color: #635F5F;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+h3 {
+  color: #635F5F;
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 14px;
+}

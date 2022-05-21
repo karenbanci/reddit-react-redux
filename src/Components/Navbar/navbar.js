@@ -6,9 +6,8 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
-
-
 import "./navbar.css";
+import "../buttons.css";
 
 export const NavBar = () => {
   return (
@@ -16,14 +15,15 @@ export const NavBar = () => {
       <img src={logo} alt="Reddit-logo" className="nav-logo" />
 
       <Search />
-      
-      <div className="nav-toggle">
+
+      <button className="btn-nav-toggle">
         <FontAwesomeIcon icon={faBars} />
-      </div>
-      <div className="nav-login">
+      </button>
+
+      <button className="btn-nav-login">
         <FontAwesomeIcon icon={faUser} />
         <FontAwesomeIcon icon={faCaretDown} />
-      </div>
+      </button>
     </nav>
   );
 };

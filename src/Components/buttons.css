@@ -1,0 +1,108 @@
+/* Botã0 da NavBar */
+
+.btn-nav-toggle {
+  display: none;
+}
+
+.btn-nav-login {
+  color: #635F5F;
+  background: none;
+  font-size: 35px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border: none;
+}
+
+.btn-nav-login:hover {
+  color: #FF4600;
+  cursor: pointer;
+}
+
+/*  Botão de pesquisa  */
+.btn-search {
+  width: 40px;
+  height: 40px;
+  margin-left: -55px;
+  border: 1px;
+  background: transparent;
+  font-size: 1.8rem;
+  color: #635F5F;
+}
+
+.btn-search:hover {
+  color: #FF4600;
+  cursor: pointer;
+}
+
+/* Botões dos Cards (comment, share e save) */
+
+.btn-card-actions {
+  color: #635F5F;
+  background: none;
+  font-size: 1rem;
+  border: none;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px 20px 0 20px;
+}
+
+.btn-card-actions h2 {
+  padding: 0 10px;
+}
+
+.btn-card-actions:hover {
+  background-color: #ff440071;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Botões de like de deslike */
+
+.btn-like-deslike {
+  color: #635F5F;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  padding-top: 10px;
+}
+
+.btn-like-deslike:hover{
+  color: #FF4600;
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+  /* Botão da Navbar */
+  .btn-nav-toggle {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px;
+    width: 100%;
+    align-items: center;
+    color: #635F5F;
+    font-size: 40px;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .btn-nav-toggle:hover{
+    color: #FF4600;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .btn-nav-login {
+    display: none;
+  }
+
+  /* Botões dos Cards (comment, share e save) */
+  .btn-card-actions {
+    margin: 10px 5px;
+  }
+}

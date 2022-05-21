@@ -3,14 +3,26 @@
   width: 260px;
   height: 200px;
   border-radius: 10px;
-  margin-top: 180px;
   box-shadow: 2px 5px 3px rgba(000, 000, 000, 0.2);
   display: flex;
   align-items: flex-end;
+  margin: 20px 0 0 50px;
+  align-items: end;
+  justify-content: center;
 }
 
 p{
   color: #fff;
   margin: 10px 0;
   text-shadow: 2px 5px 3px rgba(000, 000, 000, 0.4);
+}
+
+@media only screen and (max-width: 768px) {
+  .card-news{
+    /* display: flex; */
+
+  }
+
+
+
 }

@@ -6,7 +6,6 @@ export const CardsNews = () => {
   return (
     <div className="card-news">
       <p>lorem ipsum dolor sit amet, consectetur</p>
-
     </div>
   );
 };
