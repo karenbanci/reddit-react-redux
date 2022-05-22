@@ -1,4 +1,4 @@
-.nav {
+.nav-global {
   position: absolute;
   background-color: #ffffff;
   width: 100%;
@@ -6,7 +6,14 @@
   left: 0px;
   top: 0px;
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav-logo-search{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .nav-logo {
@@ -15,13 +22,19 @@
   margin: 10px 0 0 20px;
 }
 
+.nav-login-user{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 50px;
+}
+
 
 
 @media only screen and (max-width: 768px) {
   .nav-toggle{
     display: flex;
     justify-content: flex-end;
-    margin-right: 30px;
+    margin-right: 10px;
     width: 100%;
     padding: 0;
     align-items: center;

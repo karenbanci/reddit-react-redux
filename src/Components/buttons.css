@@ -1,23 +1,4 @@
-/* Botã0 da NavBar */
-
-.btn-nav-toggle {
-  display: none;
-}
-
-.btn-nav-login {
-  color: #635F5F;
-  background: none;
-  font-size: 35px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  border: none;
-}
-
-.btn-nav-login:hover {
-  color: #FF4600;
-  cursor: pointer;
-}
+/* Botão da NavBar */
 
 /*  Botão de pesquisa  */
 .btn-search {
@@ -33,6 +14,49 @@
 .btn-search:hover {
   color: #FF4600;
   cursor: pointer;
+}
+
+/* Botão login */
+.btn-nav-login{
+  background-color: #FF4600;
+  color: #fff;
+  width: 90px;
+  height:40px;
+  border-radius: 20px;
+  border: none;
+  font-family: 'Open Sans';
+  font-weight: 700;
+  font-size: 16px;
+  margin: 10px 20px;
+  cursor: pointer;
+}
+
+.btn-nav-login:hover {
+  background-color: #000000;
+  color: #FF4600;
+}
+
+/* Botão user */
+.btn-nav-user {
+  color: #635F5F;
+  background: none;
+  font-size: 35px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border: none;
+}
+
+.btn-nav-user:hover {
+  color: #FF4600;
+  cursor: pointer;
+}
+
+
+
+/* Botão user do modelo mobile */
+.btn-nav-toggle {
+  display: none;
 }
 
 /* Botões dos Cards (comment, share e save) */
@@ -79,11 +103,11 @@
 @media only screen and (max-width: 768px) {
 
   /* Botão da Navbar */
+
+/* Botão user do modelo mobile */
   .btn-nav-toggle {
     display: flex;
-    justify-content: flex-end;
-    margin-right: 30px;
-    width: 100%;
+
     align-items: center;
     color: #635F5F;
     font-size: 40px;
@@ -97,6 +121,11 @@
     border-radius: 5px;
     cursor: pointer;
   }
+
+  .btn-nav-user {
+    display: none;
+  }
+
   .btn-nav-login {
     display: none;
   }
