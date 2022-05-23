@@ -1,10 +1,11 @@
 .container-about {
   width: 65%;
-  height: 640px;
+  height: 540px;
   background-color: #fff;
   display: flex;
   flex-direction: row;
   margin-top: 120px;
+  border-radius: 5px;
 }
 .main-header-about{
   position: relative;
@@ -24,6 +25,7 @@
   margin: 0;
   background-image: url(../images/sidebar.jpeg);
   background-size: cover;
+  border-radius: 4px 0 0 5px;
 }
 
 .about-h1 {
@@ -53,7 +55,7 @@
 @media only screen and (max-width: 768px) {
   .container-about {
     width: 75%;
-    height: 531px;
+    height: 700px;
     background-color: #fff;
     display: flex;
     flex-direction: row;
