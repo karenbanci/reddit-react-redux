@@ -2,7 +2,7 @@ import React from "react";
 import "./cards-posts.css";
 import "../buttons.css";
 import icone from "../images/icone.png";
-import imagePost from "../images/istockphoto-1248542684-170667a.jpeg";
+import imagePost from "../images/sidebar.jpeg";
 
 import { LikeCount } from "../likes/likes-count.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

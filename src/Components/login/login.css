@@ -1,0 +1,130 @@
+.container-login {
+  width: 65%;
+  height: 640px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  margin-top: 120px;
+}
+
+/* Barra Lateral */
+.side-bar {
+  width: 115px;
+  height: 100%;
+  margin: 0;
+  background-image: url(../images/sidebar.jpeg);
+  background-size: cover;
+}
+
+/* Conteúdo do login */
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Cabeçalho aonde fica o logo e o botão de sair */
+.logo {
+  width: 250px;
+  height: 86px;
+  margin-top: 36px;
+}
+
+.main h1 {
+  margin-top: 30px;
+}
+
+/* Botão de sair do login */
+.main-header-login button {
+  position: relative;
+  top: -80px;
+  right: -180px;
+}
+
+/* Form Login */
+.main-login{
+  width: inherit;
+}
+
+/* ENTRAR COMO */
+.image-login-with{
+  width:26px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.main-login input {
+  background: #fff;
+  border: 1px solid #D9D9D9;
+  border-radius: 20px;
+  width: 40%;
+  height: 30px;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.main-login input::placeholder{
+  color: #7c7c7c;
+  text-align: left;
+  padding-left: 10px;
+  font-size: 0.8rem;
+}
+
+.btn-eye {
+  color: #635F5F;
+  cursor: pointer;
+  border: none;
+  background: none;
+  margin-left: -45px;
+}
+
+.btn-eye:hover {
+  color: #FF4600;
+}
+
+.by-karen{
+  margin-top: 45px;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .container-login {
+    width: 75%;
+    height: 531px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    margin-top: 120px;
+  }
+
+  .side-bar {
+    width: 49px;
+    margin: 0;
+    background-image: url(../images/sidebar.jpeg);
+    background-size: cover;
+  }
+
+  .logo {
+    width: 125px;
+    height: 44px;
+    margin-top: 36px;
+  }
+
+  .main h1 {
+    margin-top: 5px;
+  }
+
+  .main-login input{
+    width: 250px;
+  }
+
+  .main-header-login button {
+    position: relative;
+    top: -40px;
+    right: -45px;
+  }
+
+}

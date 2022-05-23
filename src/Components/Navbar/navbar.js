@@ -1,31 +1,40 @@
 import React from "react";
 import { Search } from "../search/search.js";
-import logo from "../images/reddit-logo.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
+import logo from "../images/reddit-logo.png";
 import "./navbar.css";
 import "../buttons.css";
+
 
 export const NavBar = () => {
   return (
     <nav className="nav-global">
       <div className="nav-logo-search">
-        <img src={logo} alt="Reddit-logo" className="nav-logo" />
+        <Link to="/">
+          <img src={logo} alt="Reddit-logo" className="nav-logo" />
+        </Link>
+
         <Search className="search" />
         <div className="nav-login-user">
-          <button className="btn-nav-login">Log in</button>
+          <Link to="/login">
+            <button className="btn-nav-login">Log in</button>
+          </Link>
 
           <button className="btn-nav-toggle">
             <FontAwesomeIcon icon={faBars} />
           </button>
 
-          <button className="btn-nav-user">
-            <FontAwesomeIcon icon={faUser} />
-            <FontAwesomeIcon icon={faCaretDown} />
-          </button>
+          <Link to="/about">
+            <button className="btn-nav-user">
+              <FontAwesomeIcon icon={faUser} />
+              <FontAwesomeIcon icon={faCaretDown} />
+            </button>
+          </Link>
         </div>
       </div>
     </nav>

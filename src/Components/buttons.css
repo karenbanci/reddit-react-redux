@@ -45,6 +45,7 @@
   justify-content: flex-end;
   align-items: center;
   border: none;
+  margin-top: 10px;
 }
 
 .btn-nav-user:hover {
@@ -99,6 +100,40 @@
   cursor: pointer;
 }
 
+/* BOTÃO DE SAIR */
+.btn-exit {
+  color: #635F5F;
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.main-header button:hover {
+  color: #FF4600;
+}
+
+/* BOTÃO ENTRAR COMO */
+.login-with {
+  background: #fff;
+  border: 1px solid #D9D9D9;
+  border-radius: 20px;
+  width: 40%;
+  height: 30px;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #635F5F;
+  font-size: 0.8rem;
+}
+
+.login-with:hover{
+  background: rgb(230, 230, 230);
+}
 
 @media only screen and (max-width: 768px) {
 
@@ -133,5 +168,10 @@
   /* Botões dos Cards (comment, share e save) */
   .btn-card-actions {
     margin: 10px 5px;
+  }
+
+  /* Botões entrar como */
+  .login-with {
+    width: 250px;
   }
 }
