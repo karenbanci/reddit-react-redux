@@ -1,5 +1,5 @@
 .container-about {
-  width: 65%;
+  width: 879px;
   height: 540px;
   background-color: #fff;
   display: flex;
@@ -54,8 +54,8 @@
 
 @media only screen and (max-width: 768px) {
   .container-about {
-    width: 75%;
-    height: 700px;
+    width: 95%;
+    height: 600px;
     background-color: #fff;
     display: flex;
     flex-direction: row;

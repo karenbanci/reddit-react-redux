@@ -1,5 +1,5 @@
 .container-login {
-  width: 65%;
+  width: 870px;
   height: 640px;
   background-color: #fff;
   display: flex;
@@ -94,7 +94,7 @@
 
 @media only screen and (max-width: 768px) {
   .container-login {
-    width: 75%;
+    width: 95%;
     height: 531px;
     background-color: #fff;
     display: flex;

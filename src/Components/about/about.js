@@ -43,30 +43,42 @@ return (
         of Lorem Ipsum.
       </h2>
 
-      <div className="midia-social-contact">
-        <Link to="/">
+      <div className="social-media-contact">
+        <a
+          href="https://www.linkedin.com/in/karen-caroline-honorio-banci-198827112/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img className="icon-about" src={linkedin} alt="midia-linkedin" />
-        </Link>
-        <Link to="/">
+        </a>
+        <a
+          href="https://www.facebook.com/banci.kakis"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             className="icon-about"
             src={facebookSocial}
             alt="midia-facebook"
           />
-        </Link>
-        <Link to="/">
+        </a>
+        <a
+          href="https://www.instagram.com/kakabanci/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img className="icon-about" src={instagram} alt="midia-instagram" />
-        </Link>
+        </a>
       </div>
 
       <h1 className="about-h1">Tecnologies</h1>
       <div className="tecnologies">
-        <img className="icon-about" src={javascript} alt="tecnology-javascript" />
         <img
           className="icon-about"
-          src={react}
-          alt="tecnology-react"
+          src={javascript}
+          alt="tecnology-javascript"
         />
+        <img className="icon-about" src={react} alt="tecnology-react" />
       </div>
 
       <h3 className="by-karen">By Karen Honorio Banci</h3>
