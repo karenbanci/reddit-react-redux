@@ -79,7 +79,7 @@ return (
         </a>
       </div>
 
-      <h1 className="about-h1">Tecnologies</h1>
+      <h1 className="about-h1">Technologies</h1>
       <div className="tecnologies">
         <img
           className="icon-about"
