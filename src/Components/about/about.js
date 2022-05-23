@@ -3,8 +3,8 @@ import "./about.css";
 
 import { Link } from "react-router-dom";
 import linkedin from "../images/linkedin.png";
-import facebookSocial from "../images/facebook-social.png";
-import instagram from "../images/instagram.png";
+import github from "../images/github.png";
+import portfolio from "../images/portfolio.png";
 
 import javascript from "../images/javascript.png";
 import react from "../images/react.webp";
@@ -30,17 +30,29 @@ return (
           </button>
         </Link>
       </div>
-      <h1 className="about-h1">About</h1>
+      <h1 className="about-h1">About Karen Honorio Banci</h1>
       <h2>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.
+        I am from Brazil. I've lived in Mountain View, CA since February, 2022.
+        <br />
+        <br />
+        My extensive experience as a Front-end Developer using JavaScript, HTML,
+        CSS, React.JS, and Node.Js. In addition, I know ORM, DOM, TDD,
+        Bootstrap, relational database (PostgreSQL and SQlite), active records,
+        validations, REGEX, and Ruby on Rails. My background working in
+        development teams gave me the ability to adjust to the dynamics and
+        changing processes of these environments while meeting the project
+        deadline. <br />
+        <br /> In my experience with Bootcamp, I developed a marketplace-based
+        application, with the same technology used by Airbnb, with this project
+        I was able to improve my skills with GitHub, teamwork, and kanban. In my
+        previous experience before Bootcamp, I worked in the chemical industry
+        acting as the responsible Chemist for my sector, where I could develop
+        my skills as a product developer, customer service, and develop a guide
+        to solving my customers' problems.
+        <br />
+        <br />I am an organized, responsible person, I am a fast learner and I
+        am resilient. I'm improving my English and my hard skills in Front-end
+        Development.
       </h2>
 
       <div className="social-media-contact">
@@ -52,22 +64,18 @@ return (
           <img className="icon-about" src={linkedin} alt="midia-linkedin" />
         </a>
         <a
-          href="https://www.facebook.com/banci.kakis"
+          href="https://github.com/karenbanci"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
-            className="icon-about"
-            src={facebookSocial}
-            alt="midia-facebook"
-          />
+          <img className="icon-about" src={github} alt="midia-facebook" />
         </a>
         <a
-          href="https://www.instagram.com/kakabanci/"
+          href="https://karenbanci.github.io/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img className="icon-about" src={instagram} alt="midia-instagram" />
+          <img className="icon-about" src={portfolio} alt="midia-instagram" />
         </a>
       </div>
 
@@ -80,8 +88,6 @@ return (
         />
         <img className="icon-about" src={react} alt="tecnology-react" />
       </div>
-
-      <h3 className="by-karen">By Karen Honorio Banci</h3>
     </div>
   </div>
 );
