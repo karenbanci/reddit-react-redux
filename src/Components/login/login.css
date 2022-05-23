@@ -31,7 +31,7 @@
 .logo {
   width: 250px;
   height: 86px;
-  margin-top: 36px;
+  margin-top: 10px;
 }
 
 .main h1 {
@@ -39,10 +39,11 @@
 }
 
 /* Botão de sair do login */
-.main-header-login button {
-  position: relative;
-  top: -80px;
-  right: -180px;
+.main-header-login {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin: 10px 15px 0 0;
 }
 
 /* Form Login */
@@ -121,12 +122,6 @@
 
   .main-login input{
     width: 250px;
-  }
-
-  .main-header-login button {
-    position: relative;
-    top: -40px;
-    right: -45px;
   }
 
 }

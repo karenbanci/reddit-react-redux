@@ -26,13 +26,13 @@ export const Login = () => {
 
       <div className="main">
         <div className="main-header-login">
-          <img src={logo} alt="logo" className="logo" />
           <Link to="/">
             <button className="btn-exit">
               <FontAwesomeIcon icon={faXmark} />
             </button>
           </Link>
         </div>
+          <img src={logo} alt="logo" className="logo" />
         <h1>
           By continuing, you agree to our User Agreement and Privacy Policy
         </h1>

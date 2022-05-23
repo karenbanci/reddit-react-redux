@@ -25,7 +25,7 @@ return (
     <div className="main">
       <div className="main-header-about">
         <Link to="/">
-          <button className="btn-exit-about">
+          <button className="btn-exit">
             <FontAwesomeIcon icon={faXmark} />
           </button>
         </Link>
