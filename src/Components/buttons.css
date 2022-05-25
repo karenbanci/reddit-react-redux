@@ -86,13 +86,15 @@
 }
 
 /* Botões de like de deslike */
+.btn-like{
+  margin-top: 30px;
+}
 
 .btn-like-deslike {
   color: #635F5F;
   font-size: 1rem;
   border: none;
   background: none;
-  padding-top: 10px;
 }
 
 .btn-like-deslike:hover{

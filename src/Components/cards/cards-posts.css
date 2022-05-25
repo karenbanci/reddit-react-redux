@@ -2,19 +2,14 @@
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   margin-top: 50px;
 }
-.Card-Top-Five {
-  background-color: #fff;
-  width: 275px;
-  height: 475px;
-  border-radius: 10px;
-  margin: 10px 30px;
-}
 
 .Card-Post-Container {
-  width: 576px;
+  width: 700px;
   border-radius: 10px;
   background-color: #fff;
   display: flex;
@@ -75,13 +70,18 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .Card-Top-Five{
-    display: none;
+  .Card-Post-Container {
+    width: 86%;
+    height: 76%;
+    margin: 10px 0;
   }
 
-  .Card-Post-Container {
+  .Card-Content {
     width: 80%;
-    height: 76%;
+  }
+
+  .Card-Content-Header {
+    width: 80%;
   }
 
   .Card-Content-Body img {

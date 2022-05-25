@@ -4,12 +4,12 @@ import { NavBar } from './components/navbar/navbar';
 import { About } from "./components/about/about";
 import { Login } from "./components/login/login";
 
-
 import { Content } from "./components/home/content.js";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 
 function App() {
+
   return (
     <Router>
       <div className="App">

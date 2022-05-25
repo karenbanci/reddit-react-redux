@@ -18,68 +18,71 @@ import "./login.css";
 import "../buttons.css";
 
 
-export const Login = () => {
-  return (
-    <div className="container-login">
-      {/* barra lateral */}
-      <div className="side-bar"></div>
+export class Login  extends React.Component {
+  render() {
 
-      <div className="main">
-        <div className="main-header-login">
-          <Link to="/">
-            <button className="btn-exit">
-              <FontAwesomeIcon icon={faXmark} />
-            </button>
-          </Link>
-        </div>
-          <img src={logo} alt="logo" className="logo" />
-        <h1>
-          By continuing, you agree to our User Agreement and Privacy Policy
-        </h1>
+    return (
+      <div className="container-login">
+        {/* barra lateral */}
+        <div className="side-bar"></div>
 
-        {/* Formulário Login */}
-        <form className="main-login">
-          <input
-            className="input-login"
-            type="text"
-            placeholder="example@example.com"
-          />
-          <div className="input-login input-password">
-            <input type="text" placeholder="password" />
-            <button className="btn-eye">
-              <FontAwesomeIcon icon={faEye} className="btn-eyeOpen" />
-              <FontAwesomeIcon icon={faEyeSlash} className="btn-eyeClosed" />
-            </button>
+        <div className="main">
+          <div className="main-header-login">
+            <Link to="/">
+              <button className="btn-exit">
+                <FontAwesomeIcon icon={faXmark} />
+              </button>
+            </Link>
           </div>
-        </form>
-        <h1>OR</h1>
+            <img src={logo} alt="logo" className="logo" />
+          <h1>
+            By continuing, you agree to our User Agreement and Privacy Policy
+          </h1>
 
-        {/* Formulário entrar como  */}
-        {/* Google */}
+          {/* Formulário Login */}
+          <form className="main-login">
+            <input
+              className="input-login"
+              type="text"
+              placeholder="example@example.com"
+            />
+            <div className="input-login input-password">
+              <input type="text" placeholder="password" />
+              <button className="btn-eye">
+                <FontAwesomeIcon icon={faEye} className="btn-eyeOpen" />
+                <FontAwesomeIcon icon={faEyeSlash} className="btn-eyeClosed" />
+              </button>
+            </div>
+          </form>
+          <h1>OR</h1>
 
-        <button className="login-with">
-          <img src={google} className="image-login-with" alt="continue-goole" />
-          Continue with Google
-        </button>
+          {/* Formulário entrar como  */}
+          {/* Google */}
 
-        {/* Facebook */}
-        <button className="login-with">
-          <img
-            src={facebook}
-            className="image-login-with"
-            alt="continue-facebook"
-          />
-          Continue with Facebook
-        </button>
+          <button className="login-with">
+            <img src={google} className="image-login-with" alt="continue-goole" />
+            Continue with Google
+          </button>
 
-        {/* Apple  */}
-        <button className="login-with">
-          <img src={apple} className="image-login-with" alt="continue-apple" />
-          Continue with Apple
-        </button>
+          {/* Facebook */}
+          <button className="login-with">
+            <img
+              src={facebook}
+              className="image-login-with"
+              alt="continue-facebook"
+            />
+            Continue with Facebook
+          </button>
 
-        <h3 className="by-karen">By Karen Honorio Banci</h3>
+          {/* Apple  */}
+          <button className="login-with">
+            <img src={apple} className="image-login-with" alt="continue-apple" />
+            Continue with Apple
+          </button>
+
+          <h3 className="by-karen">By Karen Honorio Banci</h3>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 };
