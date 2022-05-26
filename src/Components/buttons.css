@@ -67,11 +67,12 @@
   background: none;
   font-size: 1rem;
   border: none;
-  margin-top: 10px;
+  margin: 10px 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 20px 20px 0 20px;
+  height: 40px;
+  padding: 0 10px;
 }
 
 .btn-card-actions h2 {
@@ -81,7 +82,8 @@
 .btn-card-actions:hover {
   background-color: #ff440071;
   color: #fff;
-  border-radius: 5px;
+  height: 40px;
+  border-radius: 20px;
   cursor: pointer;
 }
 
@@ -170,6 +172,7 @@
   /* Botões dos Cards (comment, share e save) */
   .btn-card-actions {
     margin: 10px 5px;
+    font-size: 0.8rem;
   }
 
   /* Botões entrar como */

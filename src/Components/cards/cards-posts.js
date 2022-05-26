@@ -1,25 +1,24 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { Reddit } from "../../api/reddit.js";
+
 import "./cards-posts.css";
 import "../buttons.css";
+
 import icone from "../images/icone.png";
-import imagePost from "../images/sidebar.jpeg";
-
-import { LikeCount } from "../likes/likes-count.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
-
 import { faComment } from "@fortawesome/free-solid-svg-icons";
 import { faShareNodes } from "@fortawesome/free-solid-svg-icons";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
+import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 
-import { Reddit } from "../../api/reddit.js";
+
 
 
 export function CardsPosts() {
-  // Hook para o nome da comunidade
-  // const [subreddit, setSubreddit] = useState("");
+  // // Hook para o nome da comunidade
   const [postsData, setPostsData] = useState([]);
 
   // useEffect é similar ao componentDidMount e componentDidUpdate:
@@ -33,7 +32,7 @@ export function CardsPosts() {
   }, []);
 
   // tempo de publicação */
-  function timeSince(epoch) {
+  function TimeSince(epoch) {
     var date = new Date(0); // The 0 there is the key, which sets the date to the epoch
     date.setUTCSeconds(epoch);
 
@@ -63,22 +62,33 @@ export function CardsPosts() {
     return Math.floor(seconds) + " seconds ago";
   }
 
+  // like and deslike on post
+  const [countUp, setCountUp] = useState(0);
+  const [countDown, setCountDown] = useState(0);
+
   return (
     <div className="Main">
-
       {postsData.map((post) => {
         // return post.data.subreddit;
         return (
           <div>
             <div className="Card-Post-Container">
               <div className="Card-Status">
-                <button className="btn-like-deslike btn-like">
+                {/* <button
+                  className="btn-like-deslike btn-like"
+                  onClick={() => setCountUp(countUp + 1)}
+                >
                   <FontAwesomeIcon icon={faArrowUp} />
+                  {`${countUp === 0 ? " " : countUp}`}
                 </button>
-                <h1>{post.data.score}</h1>
-                <button className="btn-like-deslike">
+                <h1>{post.data.score} k </h1>
+                <button
+                  className="btn-like-deslike"
+                  onClick={() => setCountDown(countDown + 1)}
+                >
                   <FontAwesomeIcon icon={faArrowDown} />
-                </button>
+                  {`${countDown === 0 ? "" : countDown}`}
+                </button> */}
               </div>
               <div className="Card-Content">
                 <div className="Card-Content-Header">
@@ -92,19 +102,30 @@ export function CardsPosts() {
 
                   {/* nome do usuário */}
                   <h3>Posted by: r/{post.data.author}</h3>
-                  <h3>{timeSince(post.data.created)}</h3>
+                  <h3 className="time-since-mobile">
+                    {TimeSince(post.data.created)}
+                  </h3>
                 </div>
                 <div className="Card-Content-Body">
                   {/* título da publicação */}
                   <h1>{post.data.title}</h1>
 
                   {/* imagem da publicação */}
-                  <img src={imagePost} alt="" />
+                  <div className="image-content">
+                    <img src={post.data.thumbnail} alt="" />
+                  </div>
                 </div>
 
                 {/* interatividade */}
                 <div className="Card-Content-Footer">
+                  {/* likes */}
+                  <button className="btn-card-actions">
+                    <FontAwesomeIcon icon={faThumbsUp} />
+                    <h2>{post.data.score} likes </h2>
+                  </button>
+
                   {/* comentários */}
+
                   <button className="btn-card-actions">
                     <FontAwesomeIcon icon={faComment} />
                     <h2> {post.data.num_comments} Comments</h2>
@@ -127,8 +148,6 @@ export function CardsPosts() {
           </div>
         );
       })}
-
-
     </div>
   );
 }

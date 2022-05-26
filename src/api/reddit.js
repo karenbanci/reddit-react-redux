@@ -1,4 +1,3 @@
-import React from "react";
 
 export const Reddit = {
   getHot() {
@@ -16,15 +15,3 @@ export const Reddit = {
       });
   }
 }
-
-
-// export const getSubReddit = async () => {
-//   const requestUrl = `/subreddit`;
-//   const response = await fetch(requestUrl, {
-//     method: "GET",
-//   });
-
-//   const json = await response.json();
-
-//   return json;
-// };

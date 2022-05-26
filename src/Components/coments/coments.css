@@ -1,0 +1,39 @@
+.container {
+  width: 879px;
+  height: 900px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  margin: 110px 0;
+  border-radius: 5px;
+}
+
+/* Barra Lateral */
+.side-bar {
+  width: 115px;
+  height: 100%;
+  margin: 0;
+  background-image: url(../images/sidebar.jpeg);
+  background-size: cover;
+  border-radius: 4px 0 0 5px;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 95%;
+    height: 1300px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    margin: 100px 0;
+  }
+
+  .side-bar {
+    width: 49px;
+    margin: 0;
+    background-image: url(../images/sidebar.jpeg);
+    background-size: cover;
+  }
+
+}
