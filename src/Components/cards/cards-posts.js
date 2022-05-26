@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { Reddit } from "../../api/reddit.js";
 
 import "./cards-posts.css";
@@ -7,8 +6,6 @@ import "../buttons.css";
 
 import icone from "../images/icone.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { faComment } from "@fortawesome/free-solid-svg-icons";
 import { faShareNodes } from "@fortawesome/free-solid-svg-icons";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
@@ -61,10 +58,6 @@ export function CardsPosts() {
     }
     return Math.floor(seconds) + " seconds ago";
   }
-
-  // like and deslike on post
-  const [countUp, setCountUp] = useState(0);
-  const [countDown, setCountDown] = useState(0);
 
   return (
     <div className="Main">
