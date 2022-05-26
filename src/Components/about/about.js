@@ -32,7 +32,7 @@ export function About() {
           2022.
           <br />
           <br />
-          My extensive experience as a Front-end Developer using JavaScript,
+          My experience as a Front-end Developer using JavaScript,
           HTML, CSS, React.JS, and Node.Js. In addition, I know ORM, DOM, TDD,
           Bootstrap, relational database (PostgreSQL and SQlite), active
           records, validations, REGEX, and Ruby on Rails. My background working

@@ -12,24 +12,8 @@ import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 
 
-
-
-export function CardsPosts() {
-  // // Hook para o nome da comunidade
-  const [postsData, setPostsData] = useState([]);
-
-  // useEffect é similar ao componentDidMount e componentDidUpdate:
-  useEffect(() => {
-    async function getPostsData() {
-      Reddit.getHot().then((jsonresponse) => {
-        setPostsData(jsonresponse.data.children);
-      });
-    }
-    getPostsData();
-  }, []);
-
   // tempo de publicação */
-  function TimeSince(epoch) {
+  export function timeSince(epoch) {
     var date = new Date(0); // The 0 there is the key, which sets the date to the epoch
     date.setUTCSeconds(epoch);
 
@@ -59,6 +43,22 @@ export function CardsPosts() {
     return Math.floor(seconds) + " seconds ago";
   }
 
+
+export function CardsPosts() {
+  // // Hook para o nome da comunidade
+  const [postsData, setPostsData] = useState([]);
+
+  // useEffect é similar ao componentDidMount e componentDidUpdate:
+  useEffect(() => {
+    async function getPostsData() {
+      Reddit.getHot().then((jsonresponse) => {
+        setPostsData(jsonresponse.data.children);
+      });
+    }
+    getPostsData();
+  }, []);
+
+
   return (
     <div className="Main">
       {postsData.map((post) => {
@@ -67,21 +67,6 @@ export function CardsPosts() {
           <div>
             <div className="Card-Post-Container">
               <div className="Card-Status">
-                {/* <button
-                  className="btn-like-deslike btn-like"
-                  onClick={() => setCountUp(countUp + 1)}
-                >
-                  <FontAwesomeIcon icon={faArrowUp} />
-                  {`${countUp === 0 ? " " : countUp}`}
-                </button>
-                <h1>{post.data.score} k </h1>
-                <button
-                  className="btn-like-deslike"
-                  onClick={() => setCountDown(countDown + 1)}
-                >
-                  <FontAwesomeIcon icon={faArrowDown} />
-                  {`${countDown === 0 ? "" : countDown}`}
-                </button> */}
               </div>
               <div className="Card-Content">
                 <div className="Card-Content-Header">
@@ -96,7 +81,7 @@ export function CardsPosts() {
                   {/* nome do usuário */}
                   <h3>Posted by: r/{post.data.author}</h3>
                   <h3 className="time-since-mobile">
-                    {TimeSince(post.data.created)}
+                    {timeSince(post.data.created)}
                   </h3>
                 </div>
                 <div className="Card-Content-Body">
