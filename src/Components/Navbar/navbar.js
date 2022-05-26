@@ -11,34 +11,32 @@ import "./navbar.css";
 import "../buttons.css";
 
 
-export class NavBar  extends React.Component {
-  render() {
-    return (
-      <nav className="nav-global">
-        <div className="nav-logo-search">
-          <Link to="/">
-            <img src={logo} alt="Reddit-logo" className="nav-logo" />
+export function NavBar() {
+  return (
+    <nav className="nav-global">
+      <div className="nav-logo-search">
+        <Link to="/">
+          <img src={logo} alt="Reddit-logo" className="nav-logo" />
+        </Link>
+
+        <Search className="search" />
+        <div className="nav-login-user">
+          <Link to="/login">
+            <button className="btn-nav-login">Log in</button>
           </Link>
 
-          <Search className="search" />
-          <div className="nav-login-user">
-            <Link to="/login">
-              <button className="btn-nav-login">Log in</button>
-            </Link>
+          <button className="btn-nav-toggle">
+            <FontAwesomeIcon icon={faBars} />
+          </button>
 
-            <button className="btn-nav-toggle">
-              <FontAwesomeIcon icon={faBars} />
+          <Link to="/about">
+            <button className="btn-nav-user">
+              <FontAwesomeIcon icon={faUser} />
+              <FontAwesomeIcon icon={faCaretDown} />
             </button>
-
-            <Link to="/about">
-              <button className="btn-nav-user">
-                <FontAwesomeIcon icon={faUser} />
-                <FontAwesomeIcon icon={faCaretDown} />
-              </button>
-            </Link>
-          </div>
+          </Link>
         </div>
-      </nav>
-    );
-  }
+      </div>
+    </nav>
+  );
 };
