@@ -30,7 +30,7 @@ export function NavBar() {
 
   // manipulador da caixa do menu, aqui que ocorre a ação e direciona para a link do destino
   const handleItemClick = (id) => {
-    selectedItem == id ? setSelectedItem(null) : setSelectedItem(id);
+    selectedItem === id ? setSelectedItem(null) : setSelectedItem(id);
     // quando clica no Login ou About, além de ter direcionado para o destino, a caixa fecha
     setOpen(false);
   };

@@ -2,7 +2,6 @@ import React, {useState} from "react";
 import logo from "../images/reddit-logo.png";
 import google from "../images/google.png";
 import facebook from "../images/facebook.png";
-import apple from "../images/apple.png";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
@@ -24,7 +23,6 @@ export function Login() {
   }
 
   const togglePassword = () => {
-    console.log('hasuahsuahsuhaushaus')
     if (passwordType==='password'){
       setPasswordType('text')
       return;
