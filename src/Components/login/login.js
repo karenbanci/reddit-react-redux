@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import logo from "../images/reddit-logo.png";
 import google from "../images/google.png";
 import facebook from "../images/facebook.png";
@@ -15,8 +15,26 @@ import "./login.css";
 import "../buttons.css";
 import "../side-bar.css";
 
-
 export function Login() {
+  const [passwordType, setPasswordType] = useState('password');
+  const [passwordInput, setPasswordInput] = useState("");
+
+  const handlePasswordChange = (event) => {
+    setPasswordInput(event.target.value);
+  }
+
+  const togglePassword = () => {
+    console.log('hasuahsuahsuhaushaus')
+    if (passwordType==='password'){
+      setPasswordType('text')
+      return;
+    } else {
+      setPasswordType('password')
+    }
+  }
+
+
+
   return (
     <div className="container-login">
       {/* barra lateral */}
@@ -42,18 +60,33 @@ export function Login() {
             type="text"
             placeholder="example@example.com"
           />
-          <div className="input-login input-password">
-            <input type="text" placeholder="password" />
-            <button className="btn-eye">
-              <FontAwesomeIcon icon={faEye} className="btn-eyeOpen" />
-              <FontAwesomeIcon icon={faEyeSlash} className="btn-eyeClosed" />
+          {/* password */}
+          <div className="input-login">
+            <input
+              className="input-password"
+              placeholder="password"
+              // ele está alterando o tipo do input, quando clica no olho aberto ele troca para tipo texto, quando clica no olho com slash ele troca para o tipo passoword (oculta o texto)
+              type={passwordType}
+              // é o texto que é digitado na caixa do input
+              value={passwordInput}
+              // toda vez que modifico o valor do input, ele faz um evento
+              onChange={handlePasswordChange}
+            />
+            <button type="button" className="btn-eye" onClick={togglePassword}>
+              {passwordType === "password" ? (
+                <FontAwesomeIcon icon={faEye} />
+              ) : (
+                <FontAwesomeIcon icon={faEyeSlash} />
+              )}
             </button>
           </div>
+          <button className="btn-submit btn-login">LOGIN</button>
         </form>
+
         <h1>OR</h1>
 
-        {/* Formulário entrar como  */}
-        {/* Google */}
+        {/* Formulário entrar como
+        Google */}
 
         <button className="login-with">
           <img src={google} className="image-login-with" alt="continue-goole" />
@@ -68,12 +101,6 @@ export function Login() {
             alt="continue-facebook"
           />
           Continue with Facebook
-        </button>
-
-        {/* Apple  */}
-        <button className="login-with">
-          <img src={apple} className="image-login-with" alt="continue-apple" />
-          Continue with Apple
         </button>
 
         <h3 className="by-karen">By Karen Honorio Banci</h3>

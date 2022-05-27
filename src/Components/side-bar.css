@@ -1,10 +1,11 @@
 /* Barra Lateral */
 .side-bar {
   width: 115px;
-  height: 100%;
   margin: 0;
+  background-image: url(./images/sidebar.jpeg);
+  background-size: cover;
   animation: gradient 15s ease infinite;
-  border-radius: 4px 0 0 5px;
+  border-radius: 5px 0 0 5px;
 }
 
 @keyframes gradient {
@@ -25,7 +26,5 @@
   .side-bar {
     width: 49px;
     margin: 0;
-    background-image: url(./images/sidebar.jpeg);
-    background-size: cover;
   }
 }

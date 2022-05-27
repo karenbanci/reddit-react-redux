@@ -59,6 +59,7 @@
   margin-top: 10px;
 }
 
+
 .main-login input::placeholder{
   color: #7c7c7c;
   text-align: left;
@@ -71,7 +72,7 @@
   cursor: pointer;
   border: none;
   background: none;
-  margin-left: -45px;
+  margin-left: -28px;
 }
 
 .btn-eye:hover {

@@ -28,8 +28,11 @@ export function NavBar() {
 
   const toggleDropdown = () => setOpen(!isOpen);
 
+  // manipulador da caixa do menu, aqui que ocorre a ação e direciona para a link do destino
   const handleItemClick = (id) => {
     selectedItem == id ? setSelectedItem(null) : setSelectedItem(id);
+    // quando clica no Login ou About, além de ter direcionado para o destino, a caixa fecha
+    setOpen(false);
   };
 
   return (
@@ -43,7 +46,7 @@ export function NavBar() {
 
         <div className="nav-login-user">
           <Link to="/login">
-            <button className="btn-nav-login">Log in</button>
+            <button className="btn-submit">Log in</button>
           </Link>
 
           <Link to="/about">
@@ -52,10 +55,6 @@ export function NavBar() {
               <FontAwesomeIcon icon={faCaretDown} />
             </button>
           </Link>
-
-          {/* <button className="btn-nav-toggle">
-            <FontAwesomeIcon icon={faBars} />
-          </button> */}
 
           <button
             className="btn-nav-toggle dropdown-header"
@@ -66,7 +65,8 @@ export function NavBar() {
 
           <div className={`dropdown-body ${isOpen && "open"}`}>
             {items.map((item) => (
-              <Link to={item.destination}
+              <Link
+                to={item.destination}
                 className="dropdown-item"
                 onClick={(e) => handleItemClick(e.target.id)}
                 id={item.id}

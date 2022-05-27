@@ -16,8 +16,8 @@
   cursor: pointer;
 }
 
-/* Botão login */
-.btn-nav-login{
+/* Botão submit */
+.btn-submit{
   background-color: #FF4600;
   color: #fff;
   width: 90px;
@@ -29,6 +29,17 @@
   font-size: 16px;
   margin: 10px 20px;
   cursor: pointer;
+}
+
+.btn-submit:hover{
+  background-color: #fff;
+  color: #FF4600;
+  border: 1px solid #FF4600;
+}
+
+.btn-login{
+  width: 40%;
+  height: 30px;
 }
 
 .btn-nav-login:hover {
@@ -52,8 +63,6 @@
   color: #FF4600;
   cursor: pointer;
 }
-
-
 
 /* Botão user do modelo mobile */
 .btn-nav-toggle {
@@ -84,23 +93,6 @@
   color: #fff;
   height: 40px;
   border-radius: 20px;
-  cursor: pointer;
-}
-
-/* Botões de like de deslike */
-.btn-like{
-  margin-top: 30px;
-}
-
-.btn-like-deslike {
-  color: #635F5F;
-  font-size: 1rem;
-  border: none;
-  background: none;
-}
-
-.btn-like-deslike:hover{
-  color: #FF4600;
   cursor: pointer;
 }
 
@@ -177,6 +169,11 @@
 
   /* Botões entrar como */
   .login-with {
+    width: 250px;
+  }
+
+  /* botão do login */
+  .btn-login{
     width: 250px;
   }
 }
