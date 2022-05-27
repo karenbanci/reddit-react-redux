@@ -3,6 +3,7 @@ import { Reddit } from "../../api/reddit.js";
 
 import "./cards-posts.css";
 import "../buttons.css";
+import "../side-bar.css";
 
 import icone from "../images/icone.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -66,8 +67,7 @@ export function CardsPosts() {
         return (
           <div>
             <div className="Card-Post-Container">
-              <div className="Card-Status">
-              </div>
+              <div className="side-bar"></div>
               <div className="Card-Content">
                 <div className="Card-Content-Header">
                   <img src={icone} alt="Reddit-logo" className="icone" />

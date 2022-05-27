@@ -49,15 +49,13 @@
   margin: 10px;
 }
 
-
-.Card-Status {
-  background-image: url(../images/sidebar.jpeg);
-  background-size: cover;
+/* .Card-Status {
+  background: linear-gradient(-45deg, #ff4600, #e73c7e, #23a6d5, #23d5ab);
+  animation: gradient 15s ease infinite;
   border-radius: 10px 0 0 10px;
-  font-size: 1.2rem;
   width: 53px;
   padding: 0 10px;
-}
+} */
 
 .Card-Content-Body {
   padding: 0 20px;
@@ -86,6 +84,11 @@
     font-size: 0.8rem;
     margin-left: 0;
   }
+
+  /* .Card-Status {
+    background-image: url(../images/sidebar.jpeg);
+    background-size: cover;
+  } */
 
   .Card-Post-Container {
     width: 420px;

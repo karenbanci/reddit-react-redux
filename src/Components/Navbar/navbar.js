@@ -1,5 +1,8 @@
 import React from "react";
 import { Search } from "../search/search.js";
+import { useState }  from 'react';
+
+// import { Collapse } from "./menu/menu.js";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from "@fortawesome/free-solid-svg-icons";
@@ -11,7 +14,24 @@ import "./navbar.css";
 import "../buttons.css";
 
 
+// NAVBAR
 export function NavBar() {
+  // MENU
+  const data = [
+    { id: 0, label: "Login", destination: "/login"},
+    { id: 1, label: "About", destination: "/about"},
+  ];
+
+  const [isOpen, setOpen] = useState(false);
+  const [items, setItem] = useState(data);
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  const toggleDropdown = () => setOpen(!isOpen);
+
+  const handleItemClick = (id) => {
+    selectedItem == id ? setSelectedItem(null) : setSelectedItem(id);
+  };
+
   return (
     <nav className="nav-global">
       <div className="nav-logo-search">
@@ -20,14 +40,11 @@ export function NavBar() {
         </Link>
 
         <Search className="search" />
+
         <div className="nav-login-user">
           <Link to="/login">
             <button className="btn-nav-login">Log in</button>
           </Link>
-
-          <button className="btn-nav-toggle">
-            <FontAwesomeIcon icon={faBars} />
-          </button>
 
           <Link to="/about">
             <button className="btn-nav-user">
@@ -35,6 +52,29 @@ export function NavBar() {
               <FontAwesomeIcon icon={faCaretDown} />
             </button>
           </Link>
+
+          {/* <button className="btn-nav-toggle">
+            <FontAwesomeIcon icon={faBars} />
+          </button> */}
+
+          <button
+            className="btn-nav-toggle dropdown-header"
+            onClick={toggleDropdown}
+          >
+            <FontAwesomeIcon icon={faBars} />
+          </button>
+
+          <div className={`dropdown-body ${isOpen && "open"}`}>
+            {items.map((item) => (
+              <Link to={item.destination}
+                className="dropdown-item"
+                onClick={(e) => handleItemClick(e.target.id)}
+                id={item.id}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </nav>

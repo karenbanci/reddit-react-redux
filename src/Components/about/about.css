@@ -19,16 +19,6 @@
   cursor: pointer;
 }
 
-/* Barra Lateral */
-.side-bar {
-  width: 115px;
-  height: 100%;
-  margin: 0;
-  background-image: url(../images/sidebar.jpeg);
-  background-size: cover;
-  border-radius: 4px 0 0 5px;
-}
-
 .about-h1 {
   font-size: 2rem;
 }
@@ -44,7 +34,6 @@
   margin: 10px;
 }
 
-
 @media only screen and (max-width: 768px) {
   .container-about {
     width: 95%;
@@ -53,13 +42,6 @@
     display: flex;
     flex-direction: row;
     margin: 100px 0;
-  }
-
-  .side-bar {
-    width: 49px;
-    margin: 0;
-    background-image: url(../images/sidebar.jpeg);
-    background-size: cover;
   }
 
     .main h1 {

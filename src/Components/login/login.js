@@ -13,6 +13,8 @@ import { Link } from "react-router-dom";
 
 import "./login.css";
 import "../buttons.css";
+import "../side-bar.css";
+
 
 export function Login() {
   return (
