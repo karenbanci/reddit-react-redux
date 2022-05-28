@@ -12,66 +12,85 @@ import { faShareNodes } from "@fortawesome/free-solid-svg-icons";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 
+// tempo de publicação */
+export function timeSince(epoch) {
+  // criamos um novo objeto tipo Date e definimos o epoch nele
+  var date = new Date(0); // The 0 there is the key, which sets the date to the epoch
+  date.setUTCSeconds(epoch);
 
-  // tempo de publicação */
-  export function timeSince(epoch) {
-    // criamos um novo objeto tipo Date e definimos o epoch nele
-    var date = new Date(0); // The 0 there is the key, which sets the date to the epoch
-    date.setUTCSeconds(epoch);
+  // Date() com () vazio é a data atual, pego ela e subitraio com a data do post(da pessoa que publicou), divido entre 1000 para converter o tempo em segundos
+  var seconds = Math.floor((new Date() - date) / 1000);
 
-    // Date() com () vazio é a data atual, pego ela e subitraio com a data do post(da pessoa que publicou), divido entre 1000 para converter o tempo em segundos
-    var seconds = Math.floor((new Date() - date) / 1000);
+  // 3156000 é o valor de quantos segundos tem no ano
+  var interval = seconds / 31536000;
 
-    // 3156000 é o valor de quantos segundos tem no ano
-    var interval = seconds / 31536000;
-
-    // se a data é mais de um ano atras, ele vai retornar uma string do X years ago
-    if (interval > 1) {
-      return Math.floor(interval) + " years ago";
-    }
-    // se for igual a um mês
-    interval = seconds / 2592000;
-    if (interval > 1) {
-      return Math.floor(interval) + " months ago";
-    }
-    // se for igual a um dia
-    interval = seconds / 86400;
-    if (interval > 1) {
-      return Math.floor(interval) + " days ago";
-    }
-    // se for igual a uma hora
-    interval = seconds / 3600;
-    if (interval > 1) {
-      return Math.floor(interval) + " hours ago";
-    }
-    // se for igual a um minuto
-    interval = seconds / 60;
-    if (interval > 1) {
-      return Math.floor(interval) + " minutes ago";
-    }
-    // se for em segundos
-    return Math.floor(seconds) + " seconds ago";
+  // se a data é mais de um ano atras, ele vai retornar uma string do X years ago
+  if (interval > 1) {
+    return Math.floor(interval) + " years ago";
   }
+  // se for igual a um mês
+  interval = seconds / 2592000;
+  if (interval > 1) {
+    return Math.floor(interval) + " months ago";
+  }
+  // se for igual a um dia
+  interval = seconds / 86400;
+  if (interval > 1) {
+    return Math.floor(interval) + " days ago";
+  }
+  // se for igual a uma hora
+  interval = seconds / 3600;
+  if (interval > 1) {
+    return Math.floor(interval) + " hours ago";
+  }
+  // se for igual a um minuto
+  interval = seconds / 60;
+  if (interval > 1) {
+    return Math.floor(interval) + " minutes ago";
+  }
+  // se for em segundos
+  return Math.floor(seconds) + " seconds ago";
+}
 
-
-export function CardsPosts() {
+// (props) é a propriedade do functional component
+export function CardsPosts(props) {
   // // Hook para os datos da publicação
   const [postsData, setPostsData] = useState([]);
 
   // useEffect é similar ao componentDidMount e componentDidUpdate:
   useEffect(() => {
-    // criando uma promessa
-    (async () => {
-      // pego a função que eu importei, dentro dela tem outra função chamada getHot, recebi a promisse
-      Reddit.getHot().then((jsonresponse) => {
-        // então o conteúdo dessa promessa que é o (jsonresponse) coloco dentro de setPostsData
-        setPostsData(jsonresponse.data.children);
-      });
-      // aqui estou chamando a função assincrona
-    })();
-    // se coloco array vazio no segundo argumento, ele executa o useEffect 1 vez
-  }, []);
+    console.log("use effect");
+    setPostsData([]);
 
+    if (props.searchingTerm) {
+      console.log("searching...");
+      // criando uma promessa
+      (async () => {
+        // pego a função que eu importei, dentro dela tem outra função chamada search, recebi a promisse
+        Reddit.search(props.searchingTerm).then((jsonresponse) => {
+          // então o conteúdo dessa promessa que é o (jsonresponse) procuro os dados e o filho
+          setPostsData(jsonresponse.data.children);
+          // se o usuário digitou uma palavra que não tem resultados, vai abrir um alert
+          if (jsonresponse.data.children.length == 0) {
+            alert("not found");
+          }
+        });
+
+      })();
+    } else {
+      console.log("loading hot...");
+      // criando uma promessa
+      (async () => {
+        // pego a função que eu importei, dentro dela tem outra função chamada getHot, recebi a promisse
+        Reddit.getHot().then((jsonresponse) => {
+          // então o conteúdo dessa promessa que é o (jsonresponse) coloco dentro de setPostsData
+          setPostsData(jsonresponse.data.children);
+        });
+        // aqui estou chamando a função assincrona
+      })();
+    }
+    // se coloco array vazio no segundo argumento, ele executa o useEffect 1 vez
+  }, [props]);
 
   return (
     <div className="Main">
