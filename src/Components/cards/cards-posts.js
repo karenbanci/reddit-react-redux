@@ -61,14 +61,15 @@ export function CardsPosts() {
   // useEffect é similar ao componentDidMount e componentDidUpdate:
   useEffect(() => {
     // criando uma promessa
-    async function getPostsData() {
+    (async () => {
       // pego a função que eu importei, dentro dela tem outra função chamada getHot, recebi a promisse
       Reddit.getHot().then((jsonresponse) => {
         // então o conteúdo dessa promessa que é o (jsonresponse) coloco dentro de setPostsData
         setPostsData(jsonresponse.data.children);
       });
-    }
-    getPostsData();
+      // aqui estou chamando a função assincrona
+    })();
+    // se coloco array vazio no segundo argumento, ele executa o useEffect 1 vez
   }, []);
 
 
