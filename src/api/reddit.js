@@ -1,17 +1,14 @@
 
 export const Reddit = {
   getHot() {
-    // console.log("tentando ler o reddit");
-    // retorna uma promise que eventualmente será resolvida na lista de tracks da pesquisa
+    // retorna uma promise que eventualmente
     // solicitação GET
-
+    // pego dos dados
     return fetch("https://api.reddit.com/hot")
+    //então pego a resposta da solicitação do json que me forneceu os dados
       .then((response) => {
+        // convertendo os dados no formato JSON
         return response.json();
-      })
-      .then((jsonresponse) => {
-        console.log(jsonresponse);
-        return jsonresponse;
       });
   },
 
@@ -19,9 +16,6 @@ export const Reddit = {
     return fetch(`https://api.reddit.com/search/?q=${q}`)
       .then((response) => {
         return response.json();
-      })
-      .then((jsonresponse) => {
-        return jsonresponse;
       });
   }
 
