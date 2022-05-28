@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Reddit } from "../../api/reddit.js";
-import { Search } from "../search/search.js";
 
 import "./cards-posts.css";
 import "../buttons.css";

@@ -23,7 +23,7 @@ export function NavBar() {
   ];
 
   const [isOpen, setOpen] = useState(false);
-  const [items, setItem] = useState(data);
+  const [items] = useState(data);
   const [selectedItem, setSelectedItem] = useState(null);
 
   const toggleDropdown = () => setOpen(!isOpen);
