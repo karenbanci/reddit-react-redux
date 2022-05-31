@@ -71,7 +71,7 @@ export function CardsPosts(props) {
           // então o conteúdo dessa promessa que é o (jsonresponse) procuro os dados e o filho
           setPostsData(jsonresponse.data.children);
           // se o usuário digitou uma palavra que não tem resultados, vai abrir um alert
-          if (jsonresponse.data.children.length == 0) {
+          if (jsonresponse.data.children.length === 0) {
             alert("not found");
           }
         });
