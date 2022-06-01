@@ -3,7 +3,7 @@ import "./App.css";
 import { NavBar } from "./components/navbar/navbar";
 import { About } from "./components/about/about";
 import { Login } from "./components/login/login";
-import { AppContextProvider } from "./appContext"
+import { AppContextProvider } from "./appcontext"
 
 import { Content } from "./components/content/content.js";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
